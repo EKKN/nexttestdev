@@ -117,7 +117,7 @@ export default function PembayaranPage() {
   const fetchPembayaranDetails = async (pembayaranID: number) => {
   setLoadingDetails(true);
   try {
-    const res = await axios.get<{ data: PembayaranDetail[] }>(`${API_URL}/pembayaran/${pembayaranID}/details`);
+    const res = await axios.get<{ data: PembayaranDetail[] }>(`${API_URL}/pembayaran-details/${pembayaranID}`);
     setPembayaranDetails(res.data.data);
     setModalVisible(true); // ✅ Tampilkan modal setelah data dimuat
   } catch (error) {
